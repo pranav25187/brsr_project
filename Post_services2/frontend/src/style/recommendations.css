@@ -1,0 +1,97 @@
+.recommendations-content {
+  padding: 2rem;
+  margin-left: 260px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card Styling */
+.rec-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid #ccc;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.rec-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Category Colors */
+.rec-card.environmental { border-left-color: #27ae60; }
+.rec-card.social { border-left-color: #2980b9; }
+.rec-card.governance { border-left-color: #f39c12; }
+
+.rec-icon {
+  font-size: 2.5rem;
+  background: #f1f3f5;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.rec-details h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.rec-details p {
+  font-size: 0.95rem;
+  color: #636e72;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+/* Badges */
+.rec-meta {
+  display: flex;
+  gap: 8px;
+}
+
+.badge {
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.badge.category { background: #e9ecef; color: #495057; }
+.badge.impact.high { background: #fff0f0; color: #c3202e; }
+.badge.impact.medium { background: #fff9db; color: #f08c00; }
+
+/* Action Button */
+.action-btn {
+  background: transparent;
+  border: 1px solid #c3202e;
+  color: #c3202e;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background: #c3202e;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .recommendations-content { margin-left: 0; }
+}

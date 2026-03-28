@@ -1,0 +1,115 @@
+/* Container resets */
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f4f7fa; /* Soft blue-grey background */
+  overflow: hidden;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar-area {
+  width: 260px;
+  background: #ffffff;
+  border-right: 1px solid #e0e6ed;
+  z-index: 10;
+}
+
+/* Main Content Area */
+.content-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Welcome Banner */
+.content-header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  padding: 30px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-box h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.welcome-box p {
+  margin-top: 5px;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* The Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Stacked on small screens */
+  gap: 24px;
+}
+
+/* Modern Card Component */
+.card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e0e6ed;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f4f8;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #334155;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+/* Loading State */
+.loader-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (min-width: 1200px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr; /* Keep 1 column if you want wide graph/table, or 2 for side-by-side */
+  }
+}
