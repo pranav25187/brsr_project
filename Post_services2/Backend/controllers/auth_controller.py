@@ -6,7 +6,8 @@ import datetime
 from functools import wraps
 
 # ✅ Import config
-import config  
+from config import DB_CONFIG
+ 
 
 SECRET_KEY = config.SECRET_KEY
 bp = Blueprint('auth', __name__)
