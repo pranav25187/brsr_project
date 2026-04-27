@@ -1,4 +1,3 @@
-# Backend/config.py
 import os
 
 DB_CONFIG = {
@@ -8,6 +7,5 @@ DB_CONFIG = {
     'database': os.getenv('MYSQLDATABASE'),
     'port': int(os.getenv('MYSQLPORT'))
 }
-
 # Secret key for sessions (for Flask-JWT or session management)
 SECRET_KEY = 'my_super_secret_key_12345'
