@@ -5,6 +5,9 @@ import os
 app = Flask(__name__)
 app.secret_key = "my_super_secret_key_12345"
 
+@app.route("/")
+def home():
+    return "Backend is LIVE 🚀"
 from controllers import (
     auth_controller,
     dashboard_controller,
