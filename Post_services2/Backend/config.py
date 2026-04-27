@@ -7,5 +7,7 @@ DB_CONFIG = {
     'database': os.getenv('MYSQLDATABASE'),
     'port': int(os.getenv('MYSQLPORT'))
 }
+
+print("🔥 DB CONFIG:", DB_CONFIG)
 # Secret key for sessions (for Flask-JWT or session management)
 SECRET_KEY = 'my_super_secret_key_12345'
