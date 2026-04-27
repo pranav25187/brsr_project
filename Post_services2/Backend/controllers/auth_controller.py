@@ -6,7 +6,7 @@ import datetime
 from functools import wraps
 
 # ✅ Import config
-from config import DB_CONFIG
+import config
  
 
 SECRET_KEY = config.SECRET_KEY
