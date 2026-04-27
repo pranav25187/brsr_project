@@ -216,4 +216,4 @@ def get_profile(current_user):
 @bp.route('/logout', methods=['POST'])
 def logout():
     return jsonify({"message": "Logged out successfully"}), 200
-```
+
